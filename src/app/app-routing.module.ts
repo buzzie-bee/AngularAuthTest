@@ -8,7 +8,7 @@ import { LandingComponent } from './components/landing/landing.component';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', pathMatch: 'full', component: LandingComponent },
   { path: 'login', component: LogInComponent },
   { path: 'sign-up', component: SignUpComponent },

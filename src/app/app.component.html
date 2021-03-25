@@ -1,21 +1,18 @@
 <!-- Toolbar -->
-<nav>
-  <mat-toolbar color="secondary" class="navbar">
-    <div>
-      <a routerLink="" class="navbar-logo">AuthTest</a>
-    </div>
-    <span class="links">
-      <a mat-button routerLink="dashboard" routerLinkActive="active"
-        >Dashboard</a
-      >
-      <a mat-button routerLink="login" routerLinkActive="active">Log in</a>
-      <a mat-button routerLink="sign-up" routerLinkActive="active">Sign Up</a>
-      <a mat-button routerLink="forgot-password" routerLinkActive="active"
-        >Forgot</a
-      >
-      <a mat-button routerLink="">logout</a>
-    </span>
-  </mat-toolbar>
-</nav>
+
+<mat-toolbar color="secondary" class="navbar">
+  <div>
+    <a routerLink="" class="navbar-logo">AuthTest</a>
+  </div>
+  <span class="links">
+    <a mat-button routerLink="dashboard" routerLinkActive="active">Dashboard</a>
+    <a mat-button routerLink="login" routerLinkActive="active">Log in</a>
+    <a mat-button routerLink="sign-up" routerLinkActive="active">Sign Up</a>
+    <a mat-button routerLink="forgot-password" routerLinkActive="active"
+      >Forgot</a
+    >
+    <a mat-button routerLink="">logout</a>
+  </span>
+</mat-toolbar>
 
 <router-outlet></router-outlet>

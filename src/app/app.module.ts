@@ -7,6 +7,10 @@ import { AngularMaterialModule } from './angular-material.module';
 
 // Routing
 import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
+
+// Angular Forms Modules
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Components
 import { AppComponent } from './app.component';
@@ -17,8 +21,23 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 
 @NgModule({
-  declarations: [AppComponent, LogInComponent, SignUpComponent, LandingComponent, DashboardComponent, ForgotPasswordComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+  declarations: [
+    AppComponent,
+    LogInComponent,
+    SignUpComponent,
+    LandingComponent,
+    DashboardComponent,
+    ForgotPasswordComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule,
+    BrowserAnimationsModule,
+    AngularMaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
