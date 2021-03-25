@@ -1,1 +1,34 @@
-<p>landing works!</p>
+<div class="page-container">
+  <div class="landing-container">
+    <div class="grid-child landing-hero">
+      <h1 class="mat-display-2">AuthTest</h1>
+      <img
+        class="landing-hero-image"
+        alt="person looking at landing"
+        src="assets/app.svg"
+      />
+    </div>
+    <div class="grid-child landing-content">
+      <h1 class="mat-title">Welcome to Auth Test</h1>
+      <h2 class="mat-title">The number 1 place for all your business needs</h2>
+      <button
+        mat-stroked-button
+        type="button"
+        color="accent"
+        class="landing-button"
+        routerLink="/login"
+      >
+        <span class="landing-button-text">Log In</span>
+      </button>
+      <button
+        mat-stroked-button
+        type="button"
+        color="accent"
+        class="landing-button"
+        routerLink="/sign-up"
+      >
+        <span class="landing-button-text">Sign Up</span>
+      </button>
+    </div>
+  </div>
+</div>
