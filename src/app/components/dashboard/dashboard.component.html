@@ -1,1 +1,25 @@
-<p>dashboard works!</p>
+<div class="page-container">
+  <div class="dashboard-container">
+    <div class="grid-child dashboard-hero">
+      <h1 class="mat-display-2">Dashboard</h1>
+      <img
+        class="dashboard-hero-image"
+        alt="person looking at dashboard"
+        src="assets/profile.svg"
+      />
+    </div>
+    <div class="grid-child dashboard-content">
+      <h1 class="title">Welcome {{ user?.name }}</h1>
+      <h3 class="">Email</h3>
+      <p>&nbsp;{{ user?.email }}</p>
+      <h3 class="">Phone</h3>
+      <p>&nbsp;{{ user?.phone }}</p>
+      <h3 class="">Address</h3>
+      <p>
+        &nbsp;{{ user?.address?.streetName }}, {{ user?.address?.houseNumber }}
+      </p>
+      <p>&nbsp; {{ user?.address?.postcode }}, {{ user?.address?.city }}</p>
+      <p><i>Really basic dashboard</i></p>
+    </div>
+  </div>
+</div>

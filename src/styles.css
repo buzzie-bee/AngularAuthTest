@@ -2,6 +2,9 @@
 
 html,
 body {
+  max-width: 1080px;
+  margin: 0 auto !important;
+  float: none !important;
   height: 100%;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -11,7 +14,6 @@ body {
 .page-container {
   height: 100%;
   width: 100%;
-  padding: 10px;
 }
 
 .form-container {

@@ -1,0 +1,31 @@
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px 10px;
+  justify-items: stretch;
+  align-items: stretch;
+  padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboard-hero {
+  width: 100%;
+  /* background: blue; */
+}
+
+.dashboard-hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.dashboard-content {
+  width: 100%;
+  /* background: green; */
+}
