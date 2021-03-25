@@ -5,14 +5,33 @@
     <a routerLink="" class="navbar-logo">AuthTest</a>
   </div>
   <span class="links">
-    <a mat-button routerLink="dashboard" routerLinkActive="active">Dashboard</a>
-    <a mat-button routerLink="login" routerLinkActive="active">Log in</a>
-    <a mat-button routerLink="sign-up" routerLinkActive="active">Sign Up</a>
-    <a mat-button routerLink="forgot-password" routerLinkActive="active"
-      >Forgot</a
+    <a
+      *ngIf="isLoggedIn"
+      mat-button
+      routerLink="dashboard"
+      routerLinkActive="active"
+      >Dashboard</a
     >
-    <a mat-button routerLink="">logout</a>
+    <a
+      *ngIf="!isLoggedIn"
+      mat-button
+      routerLink="login"
+      routerLinkActive="active"
+      >Log in</a
+    >
+    <a
+      *ngIf="!isLoggedIn"
+      mat-button
+      routerLink="sign-up"
+      routerLinkActive="active"
+      >Sign Up</a
+    >
+    <a *ngIf="isLoggedIn" mat-button (click)="logOut()">Log Out</a>
   </span>
 </mat-toolbar>
 
-<router-outlet></router-outlet>
+<div class="page-container">
+  <router-outlet></router-outlet>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,15 @@
+.footer-container {
+  width: 100%;
+  background-color: #673ab7;
+}
+
+/* Disable permanent selection of footer link list item */
+.mat-list-single-selected-option,
+.mat-list-single-selected-option:hover,
+.mat-list-single-selected-option:focus {
+  background: rgba(0, 0, 0, 0);
+}
+
+.mat-list-base .mat-list-option {
+  color: #fff;
+}

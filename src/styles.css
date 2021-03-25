@@ -1,18 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
-
 html,
 body {
   max-width: 1080px;
   margin: 0 auto !important;
   float: none !important;
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   background: #eeeeee;
 }
 
 .page-container {
-  height: 100%;
+  min-height: 90vh;
   width: 100%;
 }
 
