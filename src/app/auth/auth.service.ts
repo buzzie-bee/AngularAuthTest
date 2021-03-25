@@ -84,7 +84,7 @@ export class AuthService {
     // Don't report back if email already exists or not
     return new Promise((resolve) => {
       setTimeout(() => {
-        Users.map((user: User) => {
+        const updated: User[] = Users.map((user: User) => {
           if (user.email === email) {
             return {
               ...user,
@@ -93,6 +93,9 @@ export class AuthService {
           }
           return user;
         });
+
+        Users.splice(0, Users.length);
+        Users.push(...updated);
 
         resolve('success');
       }, 1500);
