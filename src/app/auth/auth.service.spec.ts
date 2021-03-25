@@ -48,7 +48,7 @@ describe('AuthService', () => {
       name: 'Obi Wan Kenobi',
       address: {
         streetName: 'Jedi Temple',
-        houseNumber: 1,
+        houseNumber: '1',
         postcode: '00001',
         city: 'Coruscant',
       },
@@ -67,7 +67,7 @@ describe('AuthService', () => {
       name: 'Obi Wan Kenobi',
       address: {
         streetName: 'Jedi Temple',
-        houseNumber: 1,
+        houseNumber: '1',
         postcode: '00001',
         city: 'Coruscant',
       },
@@ -91,7 +91,7 @@ describe('AuthService', () => {
       name: 'testing',
       address: {
         streetName: 'testing',
-        houseNumber: 1,
+        houseNumber: '1',
         postcode: '00000',
         city: 'testing',
       },

@@ -4,7 +4,7 @@ export interface User {
   name: string;
   address: {
     streetName: string;
-    houseNumber: number;
+    houseNumber: string;
     postcode: string;
     city: string;
   };

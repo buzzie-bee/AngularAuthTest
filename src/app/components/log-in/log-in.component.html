@@ -5,7 +5,7 @@
     </mat-card-header>
 
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <mat-card-content class="login-form">
+      <mat-card-content class="form-container">
         <mat-form-field class="form-text-input">
           <input
             matInput
@@ -19,7 +19,7 @@
           *ngIf="
             loginForm.controls.email.errors && loginForm.controls.email.touched
           "
-          class="error-card"
+          class="form-error-card"
         >
           <mat-content>A valid email is required!</mat-content>
         </mat-card>
@@ -48,7 +48,7 @@
             loginForm.controls.password.errors &&
             loginForm.controls.password.touched
           "
-          class="error-card"
+          class="form-error-card"
         >
           <mat-content>A password is required!</mat-content>
         </mat-card>
@@ -57,18 +57,18 @@
         mat-stroked-button
         type="submit"
         color="accent"
-        class="submit-button"
+        class="form-submit-button"
         loading="attempting"
         [class.button-loading-spinner]="loading"
       >
         <span
-          class="submit-button-text"
-          [class.submit-button-loading]="loading"
+          class="form-submit-button-text"
+          [class.form-submit-button-loading]="loading"
         >
           Log in
         </span>
       </button>
-      <mat-card *ngIf="failed" class="error-card">
+      <mat-card *ngIf="failed" class="form-error-card">
         <mat-content
           ><p class="title">
             We could not find a user with that email and password

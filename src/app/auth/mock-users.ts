@@ -7,7 +7,7 @@ export const Users: User[] = [
     name: 'Tom Bee',
     address: {
       streetName: 'Hacker Strasse',
-      houseNumber: 2,
+      houseNumber: '2',
       postcode: '41541',
       city: 'Dormagen',
     },
@@ -19,7 +19,7 @@ export const Users: User[] = [
     name: 'Obi Wan Kenobi',
     address: {
       streetName: 'Jedi Temple',
-      houseNumber: 1,
+      houseNumber: '1',
       postcode: '00001',
       city: 'Coruscant',
     },
