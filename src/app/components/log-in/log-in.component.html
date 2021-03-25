@@ -1,1 +1,84 @@
-<p>log-in works!</p>
+<div class="login-wrapper">
+  <mat-card class="form-card">
+    <mat-card-header class="form-header">
+      <mat-card-title class="form-title">Log in</mat-card-title>
+    </mat-card-header>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-card-content class="login-form">
+        <mat-form-field class="form-text-input">
+          <input
+            matInput
+            placeholder="Email"
+            id="email"
+            formControlName="email"
+            required
+          />
+        </mat-form-field>
+        <mat-card
+          *ngIf="
+            loginForm.controls.email.errors && loginForm.controls.email.touched
+          "
+          class="error-card"
+        >
+          <mat-content>A valid email is required!</mat-content>
+        </mat-card>
+
+        <mat-form-field class="form-text-input">
+          <input
+            matInput
+            [type]="hide ? 'password' : 'text'"
+            placeholder="Password"
+            formControlName="password"
+            required
+          />
+          <button
+            mat-icon-button
+            matSuffix
+            type="button"
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </mat-form-field>
+        <mat-card
+          *ngIf="
+            loginForm.controls.password.errors &&
+            loginForm.controls.password.touched
+          "
+          class="error-card"
+        >
+          <mat-content>A password is required!</mat-content>
+        </mat-card>
+      </mat-card-content>
+      <button
+        mat-stroked-button
+        type="submit"
+        color="accent"
+        class="submit-button"
+        loading="attempting"
+        [class.button-loading-spinner]="loading"
+      >
+        <span
+          class="submit-button-text"
+          [class.submit-button-loading]="loading"
+        >
+          Log in
+        </span>
+      </button>
+      <mat-card *ngIf="failed" class="error-card">
+        <mat-content
+          ><p class="title">
+            We could not find a user with that email and password
+          </p>
+          <p>
+            <a routerLink="/forgot-password">Reset Password</a>
+          </p>
+          <p><a routerLink="/sign-up">Sign Up</a></p>
+        </mat-content>
+      </mat-card>
+    </form>
+  </mat-card>
+</div>
