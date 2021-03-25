@@ -15,8 +15,12 @@
 }
 
 .landing-hero {
-  width: 100%;
-  /* background: blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .landing-hero-image {
@@ -26,12 +30,12 @@
 }
 
 .landing-content {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-left: 30px;
+  padding-right: 30px;
 }
 
 .landing-button {
